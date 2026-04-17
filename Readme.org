@@ -1,0 +1,4 @@
+* Readme
+
+Cabal-experiments is a repo for Haskell projects that use cabal without
+stack.
