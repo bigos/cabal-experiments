@@ -1,8 +1,16 @@
 module Main where
 
 import Data.GraphViz
-import Data.GraphViz.Attributes (color, filled, shape, style, textLabel)
-import Data.GraphViz.Attributes.Complete (Number (Int))
+import Data.GraphViz.Attributes
+  ( color,
+    filled,
+    shape,
+    style,
+    textLabel,
+  )
+import Data.GraphViz.Attributes.Complete
+  ( Number (Int),
+  )
 import Data.GraphViz.Types
 import Data.GraphViz.Types.Monadic
   ( GraphID (Num, Str),
