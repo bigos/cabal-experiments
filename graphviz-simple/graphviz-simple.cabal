@@ -68,7 +68,8 @@ executable graphviz-simple
 
     -- Other library packages from which modules are imported.
     build-depends:   base,
-                     graphviz ^>=2999.20.2.1
+                     graphviz ^>=2999.20.2.1,
+                     text >= 2.1.4
 
     -- Directories containing source files.
     hs-source-dirs:   app
