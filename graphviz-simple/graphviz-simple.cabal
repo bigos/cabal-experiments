@@ -68,7 +68,7 @@ executable graphviz-simple
 
     -- Other library packages from which modules are imported.
     build-depends:   base,
-                     graphviz,
+                     graphviz >=299.20.1,
                      text >= 2.1.4
 
     -- Directories containing source files.
