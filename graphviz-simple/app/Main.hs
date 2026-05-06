@@ -29,7 +29,7 @@ import Data.Text.Lazy.IO qualified as T
 
 graph :: DotGraph String
 graph =
-  digraph (Str "G" :: GraphID Str) $ do
+  digraph (Str "G") $ do
     cluster (Str "cluster0") $ do
       graphAttrs [style filled, color LightGray]
       nodeAttrs [style filled, color White]
