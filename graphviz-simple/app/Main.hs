@@ -3,34 +3,13 @@
 module Main where
 
 import Data.GraphViz
-import Data.GraphViz.Attributes
-  ( color,
-    filled,
-    shape,
-    style,
-    textLabel,
-  )
-import Data.GraphViz.Attributes.Complete
-  ( Color (..),
-    Number (Int),
-    Shape (..),
-    StyleItem (..),
-  )
-import Data.GraphViz.Printing (renderDot, toDot)
-import Data.GraphViz.Types.Monadic
-  ( GraphID (Str),
-    cluster,
-    digraph,
-    graphAttrs,
-    node,
-    nodeAttrs,
-    (-->),
-  )
+import Data.GraphViz.Printing (renderDot)
 import Data.Text.Lazy.IO qualified as T
 import Prelude hiding (Int)
 
 -- avoid clash with GraphViz Int
 
+graph :: b
 graph =
   digraph (Str "G") $
     do
