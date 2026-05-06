@@ -1,4 +1,8 @@
+{-# LANGUAGE OverloadedStrings #-}
+
 module Main where
+
+-- avoid clash with GraphViz Int
 
 import Data.GraphViz
 import Data.GraphViz.Attributes
@@ -9,11 +13,13 @@ import Data.GraphViz.Attributes
     textLabel,
   )
 import Data.GraphViz.Attributes.Complete
-  ( Number (Int),
+  ( Color (..),
+    Number (Int),
+    Shape (..),
+    StyleItem (..),
   )
-import Data.GraphViz.Types
 import Data.GraphViz.Types.Monadic
-  ( GraphID (Num, Str),
+  ( GraphID (Str),
     cluster,
     digraph,
     graphAttrs,
@@ -21,6 +27,7 @@ import Data.GraphViz.Types.Monadic
     nodeAttrs,
     (-->),
   )
+import Prelude hiding (Int)
 
 graph =
   digraph (Str "G") $ do
