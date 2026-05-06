@@ -12,13 +12,12 @@ import Data.GraphViz.Attributes
   )
 import Data.GraphViz.Attributes.Complete
   ( Color (..),
-    Number (..),
     Shape (..),
     StyleItem (..),
   )
 import Data.GraphViz.Printing (renderDot, toDot)
 import Data.GraphViz.Types.Monadic
-  ( GraphID (..),
+  ( GraphID (Num, Str),
     cluster,
     digraph,
     graphAttrs,
@@ -27,14 +26,11 @@ import Data.GraphViz.Types.Monadic
     (-->),
   )
 import Data.Text.Lazy.IO qualified as T
-import Prelude hiding (Int)
 
--- avoid clash with GraphViz Int
-
--- graph :: Data.GraphViz.Types.Generalised.DotGraph String
+-- graph :: DotGraph String
 graph =
-  digraph (Str "G") $ do
-    cluster (Int 0) $ do
+  digraph (Str "G" :: GraphID String) $ do
+    cluster (Str "cluster0") $ do
       graphAttrs [style filled, color LightGray]
       nodeAttrs [style filled, color White]
       "a0" --> "a1"
@@ -42,7 +38,7 @@ graph =
       "a2" --> "a3"
       graphAttrs [textLabel "process #1"]
 
-    cluster (Int 1) $ do
+    cluster (Str "cluster1") $ do
       nodeAttrs [style filled]
       "b0" --> "b1"
       "b1" --> "b2"
@@ -61,6 +57,7 @@ graph =
 
 main :: IO ()
 main = do
+  -- dot -Tpng /tmp/graph.dot -o graph.png
   T.writeFile "/tmp/graph.dot" (renderDot (toDot graph))
   putStrLn "Tell me your name"
   name <- getLine
