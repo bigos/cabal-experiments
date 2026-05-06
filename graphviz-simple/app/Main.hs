@@ -3,20 +3,26 @@
 
 module Main where
 
-import Data.GraphViz
+--import Data.GraphViz
 import Data.GraphViz.Attributes
   ( color,
     filled,
     shape,
     style,
-    textLabel,
-  )
+    textLabel
+   )
 import Data.GraphViz.Attributes.Complete
-  ( Color (..),
+  (
+    Attribute (Color ),
     Shape (..),
     StyleItem (..),
   )
 import Data.GraphViz.Printing (renderDot, toDot)
+import Data.GraphViz.Types.Generalised (DotGraph)
+
+
+import Data.GraphViz.Attributes.Colors.X11( X11Color( White,Blue, LightGray ) )
+
 import Data.GraphViz.Types.Monadic
   ( GraphID (Num, Str),
     cluster,
