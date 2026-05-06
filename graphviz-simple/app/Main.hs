@@ -11,20 +11,12 @@ import Data.GraphViz.Attributes
     style,
     textLabel
    )
-import Data.GraphViz.Attributes.Complete
-  (
-    Attribute (Color ),
-    Shape (..),
-    StyleItem (..),
-  )
+import Data.GraphViz.Attributes.Complete (Shape (..))
 import Data.GraphViz.Printing (renderDot, toDot)
 import Data.GraphViz.Types.Generalised (DotGraph)
-
-
 import Data.GraphViz.Attributes.Colors.X11( X11Color( White,Blue, LightGray ) )
-
 import Data.GraphViz.Types.Monadic
-  ( GraphID (Num, Str),
+  ( GraphID (Str),
     cluster,
     digraph,
     graphAttrs,
