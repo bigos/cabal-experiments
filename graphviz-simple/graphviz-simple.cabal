@@ -53,6 +53,11 @@ extra-doc-files:    CHANGELOG.md
 common warnings
     ghc-options: -Wall
 
+library
+    -- huh? that allows to cabal build without errors, giving me the hope of running the hls
+    -- exposed-modules:    graphviz
+
+
 executable graphviz-simple
     -- Import common warning flags.
     import:           warnings
