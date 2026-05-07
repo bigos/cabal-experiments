@@ -1,29 +1,15 @@
+{-# LANGUAGE ImportQualifiedPost #-}
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE DataKinds #-}
 
 module Main where
 
---import Data.GraphViz
-import Data.GraphViz.Attributes
-  ( color,
-    filled,
-    shape,
-    style,
-    textLabel
-   )
-import Data.GraphViz.Attributes.Complete (Shape (..))
+-- import Data.GraphViz
+import Data.GraphViz.Attributes (color, filled, shape, style, textLabel)
+import Data.GraphViz.Attributes.Colors.X11 (X11Color (Blue, LightGray, White))
+import Data.GraphViz.Attributes.Complete (Shape (MDiamond, MSquare))
 import Data.GraphViz.Printing (renderDot, toDot)
 import Data.GraphViz.Types.Generalised (DotGraph)
-import Data.GraphViz.Attributes.Colors.X11( X11Color( White,Blue, LightGray ) )
-import Data.GraphViz.Types.Monadic
-  ( GraphID (Str),
-    cluster,
-    digraph,
-    graphAttrs,
-    node,
-    nodeAttrs,
-    (-->),
-  )
+import Data.GraphViz.Types.Monadic (GraphID (Str), cluster, digraph, graphAttrs, node, nodeAttrs, (-->))
 import Data.Text.Lazy.IO qualified as T
 
 graph :: DotGraph String
