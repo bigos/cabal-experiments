@@ -55,7 +55,8 @@ common warnings
 
 library
     -- huh? that allows to cabal build without errors, giving me the hope of running the hls
-    -- exposed-modules:    graphviz
+    exposed-modules:    PackageInfo_graphviz_simple
+                        Paths_graphviz_simple
 
 
 executable graphviz-simple
