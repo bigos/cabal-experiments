@@ -1,0 +1,7 @@
+* Readme
+
+Do not use cabal for projects where you have to add dependencies and import them
+into the source.
+
+Struggling with Cabal took me two days where stack was done in roughly half an
+hour.
