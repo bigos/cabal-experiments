@@ -73,6 +73,7 @@ executable graphviz-simple
 
     -- Other library packages from which modules are imported.
     build-depends:   base >= 4.18.3.0,
+                     base >= 4.18.3.0,
                      graphviz >= 2999.20.2.1,
                      text >= 2.1.4
 
