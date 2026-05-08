@@ -1,4 +1,4 @@
-cabal-version:      3.0
+cabal-version:      3.12
 -- The cabal-version field refers to the version of the .cabal specification,
 -- and can be different from the cabal-install (the tool) version and the
 -- Cabal (the library) version you are using. As such, the Cabal (the library)
@@ -53,13 +53,13 @@ extra-doc-files:    CHANGELOG.md
 common warnings
     ghc-options: -Wall
 
--- library
---     -- huh? that allows to cabal build without errors, giving me the hope of running the hls
---     autogen-modules:    PackageInfo_graphviz_simple
---                         Paths_graphviz_simple
+library
+    -- huh? that allows to cabal build without errors, giving me the hope of running the hls
+    -- autogen-modules:    PackageInfo_graphviz_simple,
+    --                     Paths_graphviz_simple
 
---     other-modules:    PackageInfo_graphviz_simple
---                       Paths_graphviz_simple
+    -- other-modules:    PackageInfo_graphviz_simple,
+    --                   Paths_graphviz_simple
 
 
 executable graphviz-simple
@@ -76,7 +76,7 @@ executable graphviz-simple
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:   base,
+    build-depends:   base >= 4.18.3.0,
                      graphviz >= 2999.20.2.1,
                      text >= 2.1.4
 
