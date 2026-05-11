@@ -2,3 +2,6 @@
 
 Cabal-experiments is a repo for Haskell projects that use cabal without
 stack.
+
+Some projects will need packages in dependencies and imports, these should be
+used with stack, because cabal is not worth the effort in such situations.
