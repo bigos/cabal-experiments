@@ -22,4 +22,10 @@ main =
             else
               if limit > factorialLimit
                 then putStrLn ("You exceeded the limit, please do not enter anything above " ++ show factorialLimit)
-                else putStrLn ("calculated factorial: " ++ show (factorial limit))
+                else
+                  putStrLn
+                    ( "calculated factorial: "
+                        ++ show
+                          ( factorial limit
+                          )
+                    )
